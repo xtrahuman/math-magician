@@ -15,7 +15,7 @@
 ## Procedure to clone project
 - open your terminal
 - type git clone https://github.com/xtrahuman/math-magician.git
-- type cd math-magician/my-app to change directory to the folder of the project
+- type cd math-magician to change directory to the folder of the project
 - in your terminal npm install to install app dependencies
 - run npm start in your terminal 
 
