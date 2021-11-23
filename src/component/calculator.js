@@ -1,11 +1,7 @@
 import React from 'react';
 /* eslint-disable react/prop-types */
-const Buttonfunc = ({ number }) => (
-  <button type="button">{`${number}`}</button>
-);
-
-const ButtonStyle = ({ number }) => (
-  <button type="button" className="style-color">{`${number}`}</button>
+const Buttonfunc = ({ number, styles }) => (
+  <button type="button" className={`${styles ? 'style-color' : ''}`}>{`${number}`}</button>
 );
 
 class Calculator extends React.Component {
@@ -18,27 +14,27 @@ class Calculator extends React.Component {
     return (
       <div className="calc-grid">
         <div className="show">
-          <h1 className="lower-show">{ this.state }</h1>
+          <p className="lower-show">{ this.state }</p>
         </div>
-        <Buttonfunc number="AC" />
-        <Buttonfunc number="+/-" />
-        <Buttonfunc number="%" />
-        <ButtonStyle number="/" />
-        <Buttonfunc number={7} />
-        <Buttonfunc number={8} />
-        <Buttonfunc number={9} />
-        <ButtonStyle number="x" />
-        <Buttonfunc number={4} />
-        <Buttonfunc number={5} />
-        <Buttonfunc number={6} />
-        <ButtonStyle number="-" />
-        <Buttonfunc number={1} />
-        <Buttonfunc number={2} />
-        <Buttonfunc number={3} />
-        <ButtonStyle number="+" />
+        <Buttonfunc number="AC" styles={false} />
+        <Buttonfunc number="+/-" styles={false} />
+        <Buttonfunc number="%" styles={false} />
+        <Buttonfunc number="÷" styles />
+        <Buttonfunc number={7} styles={false} />
+        <Buttonfunc number={8} styles={false} />
+        <Buttonfunc number={9} styles={false} />
+        <Buttonfunc number="x" styles />
+        <Buttonfunc number={4} styles={false} />
+        <Buttonfunc number={5} styles={false} />
+        <Buttonfunc number={6} styles={false} />
+        <Buttonfunc number="-" styles />
+        <Buttonfunc number={1} styles={false} />
+        <Buttonfunc number={2} styles={false} />
+        <Buttonfunc number={3} styles={false} />
+        <Buttonfunc number="+" styles />
         <button type="button" className="span-two">0</button>
         <Buttonfunc number="." />
-        <ButtonStyle number="=" />
+        <Buttonfunc number="=" styles />
       </div>
     );
   }
