@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+p {
+  margin: 0;
+}
+
 .calc-grid {
   display: grid;
   margin-top: 30px;
@@ -45,6 +49,10 @@ body {
 .show .lower-show {
   color: #fff;
   font-size: 2.5rem;
+}
+
+.show .lower-show span {
+  margin-right: 5px;
 }
 
 button.style-color {
