@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
-/* eslint-disable react/prop-types */
 
 const classstyle = (style, number) => {
   if (style) {
@@ -16,6 +16,12 @@ const classstyle = (style, number) => {
 const Buttonfunc = ({ number, styles, handleClick }) => (
   <button type="button" onClick={() => handleClick(`${number}`)} className={`${classstyle(styles, number)}`}>{`${number}`}</button>
 );
+
+Buttonfunc.propTypes = {
+  number: PropTypes.string.isRequired,
+  styles: PropTypes.bool.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 class Calculator extends React.Component {
   constructor(props) {
