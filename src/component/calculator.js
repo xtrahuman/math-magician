@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
@@ -23,54 +23,48 @@ Buttonfunc.propTypes = {
   handleClick: PropTypes.func.isRequired,
 };
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: null,
-      operation: null,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
+const Calculator = () => {
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
-  handleClick(num) {
-    this.setState((prev) => calculate(prev, num));
-  }
+  const handleClick = (num) => {
+    setState((prev) => ({ ...prev, ...calculate(prev, num) }));
+  };
 
-  render() {
-    const { total, next, operation } = this.state;
-    return (
-      <div className="calc-grid">
-        <div className="show">
-          <p className="lower-show">
-            <span>{ total }</span>
-            <span>{ operation }</span>
-            <span>{ next }</span>
-          </p>
-        </div>
-        <Buttonfunc number="AC" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="+/-" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="%" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="÷" styles handleClick={this.handleClick} />
-        <Buttonfunc number="7" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="8" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="9" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="x" styles handleClick={this.handleClick} />
-        <Buttonfunc number="4" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="5" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="6" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="-" styles handleClick={this.handleClick} />
-        <Buttonfunc number="1" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="2" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="3" styles={false} handleClick={this.handleClick} />
-        <Buttonfunc number="+" styles handleClick={this.handleClick} />
-        <Buttonfunc number="0" handleClick={this.handleClick} />
-        <Buttonfunc number="." handleClick={this.handleClick} />
-        <Buttonfunc number="=" styles handleClick={this.handleClick} />
+  const { total, next, operation } = state;
+  return (
+    <div className="calc-grid">
+      <div className="show">
+        <p className="lower-show">
+          <span>{ total }</span>
+          <span>{ operation }</span>
+          <span>{ next }</span>
+        </p>
       </div>
-    );
-  }
-}
+      <Buttonfunc number="AC" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="+/-" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="%" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="÷" styles handleClick={handleClick} />
+      <Buttonfunc number="7" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="8" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="9" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="x" styles handleClick={handleClick} />
+      <Buttonfunc number="4" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="5" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="6" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="-" styles handleClick={handleClick} />
+      <Buttonfunc number="1" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="2" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="3" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="+" styles handleClick={handleClick} />
+      <Buttonfunc number="0" styles={false} handleClick={handleClick} />
+      <Buttonfunc number="." styles={false} handleClick={handleClick} />
+      <Buttonfunc number="=" styles handleClick={handleClick} />
+    </div>
+  );
+};
 
 export { Calculator as default };
