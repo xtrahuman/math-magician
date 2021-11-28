@@ -5,6 +5,10 @@
 ## Description
 > creating a simple calculator using react
 
+Demo view                                |  static view
+:---------------------------------------:|:---------------------------------------:
+![](./public/Animation1.gif)                |  ![](./public/Calc-capture.PNG)
+
 
 ## Built With
 
@@ -14,10 +18,10 @@
 
 ## Procedure to clone project
 - open your terminal
-- type git clone https://github.com/xtrahuman/math-magician.git
-- type cd math-magician to change directory to the folder of the project
-- in your terminal npm install to install app dependencies
-- run npm start in your terminal 
+- type ```git clone https://github.com/xtrahuman/math-magician.git```
+- type ```cd math-magician``` to change directory to the folder of the project
+- in your terminal ```npm install``` to install app dependencies
+- run ```npm start``` in your terminal 
 
 
 ## project link
