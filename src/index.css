@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #EBFCFF;
+  background-color: #ebfcff;
 }
 
 p {
@@ -14,9 +14,9 @@ p {
 }
 
 .container {
-  width : 80%;
- margin-left: auto;
- margin-right: auto;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-nav {
@@ -33,6 +33,7 @@ p {
 .navBar ul {
   display: flex;
   list-style: none;
+
   /* justify-content: flex-end; */
 }
 
@@ -44,18 +45,18 @@ p {
 }
 
 .navBar ul a:hover {
-  color: #FF4133;
+  color: #ff4133;
   text-decoration: underline;
 }
 
 .navBar ul a.active-link {
   text-decoration: underline;
-  color: #ff0000
+  color: #f00;
 }
 
 .calc-container {
-display: flex;
-justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .calc-container p {
@@ -108,13 +109,12 @@ button.style-color {
 }
 
 .math-home p {
- margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .math-home h2 {
   font-size: 28px;
- }
- 
+}
 
 .Quotes {
   display: flex;
