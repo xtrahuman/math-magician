@@ -7,7 +7,7 @@
 
 Demo view                                |  static view
 :---------------------------------------:|:---------------------------------------:
-![](./public/Animation1.gif)                |  ![](./public/Calc-capture.PNG)
+![](./public/Animation1.gif)             |  ![](./public/Calc-capture.PNG)
 
 
 ## Built With
@@ -26,7 +26,7 @@ Demo view                                |  static view
 
 ## project link
 kindly click the link below to view the website
-- website link: [upcoming]()
+- website link: [click here](https://suspicious-hamilton-87ae1c.netlify.app/)
 
 ## Author
 
