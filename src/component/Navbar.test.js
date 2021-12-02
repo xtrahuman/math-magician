@@ -6,10 +6,10 @@ import Navbar from './Navbar';
 it('renders correctly', () => {
   const nav = renderer
     .create(
-        <BrowserRouter>
-        <Navbar/>
-        </BrowserRouter>,
-      )
+      <BrowserRouter>
+        <Navbar />
+      </BrowserRouter>,
+    )
     .toJSON();
   expect(nav).toMatchSnapshot();
 });

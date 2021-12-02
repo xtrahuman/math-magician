@@ -5,8 +5,8 @@ import Quotes from './Quotes';
 it('renders correctly', () => {
   const quotes = renderer
     .create(
-        <Quotes/>,
-      )
+      <Quotes />,
+    )
     .toJSON();
   expect(quotes).toMatchSnapshot();
 });

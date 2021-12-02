@@ -5,8 +5,8 @@ import Header from './Header';
 it('renders correctly', () => {
   const heading = renderer
     .create(
-        <Header/>,
-      )
+      <Header />,
+    )
     .toJSON();
   expect(heading).toMatchSnapshot();
 });
