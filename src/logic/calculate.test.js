@@ -38,6 +38,6 @@ describe('calculate function', () => {
       operation: '+',
     };
     const buttonName = 'AC';
-    expect(calculate(obj, buttonName).total).toBe(null);
+    expect(calculate(obj, buttonName).total).toBe('0');
   });
 });
