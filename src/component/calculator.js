@@ -25,7 +25,7 @@ Buttonfunc.propTypes = {
 
 const Calculator = () => {
   const [state, setState] = useState({
-    total: null,
+    total: '0',
     next: null,
     operation: null,
   });
@@ -40,7 +40,7 @@ const Calculator = () => {
       <p>lets do some maths</p>
       <div className="calc-grid">
         <div className="show">
-          <p className="lower-show">
+          <p className="lower-show" role="none">
             <span>{ total }</span>
             <span>{ operation }</span>
             <span>{ next }</span>
