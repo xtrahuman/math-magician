@@ -40,7 +40,7 @@ const Calculator = () => {
       <p>lets do some maths</p>
       <div className="calc-grid">
         <div className="show">
-          <p className="lower-show" role="output">
+          <p className="lower-show" role="none">
             <span>{ total }</span>
             <span>{ operation }</span>
             <span>{ next }</span>
